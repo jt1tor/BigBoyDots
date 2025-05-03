@@ -71,7 +71,8 @@
     koreader
     komikku
     peaclock
-    pinta
+    lazygit
+    gimp
   ];
 
   home.sessionVariables = {
