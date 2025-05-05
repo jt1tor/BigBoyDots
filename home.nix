@@ -84,7 +84,7 @@
   programs = {
     # program enable stuff
     kitty.enable = true;
-#    pywal.enable = true;
+    pywal.enable = true;
     yt-dlp.enable = true;
     zathura.enable = true;
     jq.enable = true;

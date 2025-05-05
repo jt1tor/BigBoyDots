@@ -325,6 +325,7 @@
     ipaexfont
     kochi-substitute
     ipafont
+    intel-one-mono
   ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   system.stateVersion = "24.05"; # Did you read the comment?
