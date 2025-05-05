@@ -111,7 +111,7 @@
       syntaxHighlighting.enable = true;
 
       # zsh startup
-      initExtra = ''
+      initContent = ''
         fastfetch -l "nixos_old_small" --logo-position left
       '';
 
