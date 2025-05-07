@@ -326,6 +326,9 @@
     kochi-substitute
     ipafont
     intel-one-mono
+    source-han-mono
+    source-han-sans
+    source-han-serif
   ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   system.stateVersion = "24.05"; # Did you read the comment?
