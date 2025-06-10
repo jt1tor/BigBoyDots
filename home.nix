@@ -142,9 +142,9 @@
       shellAliases = {
         eco = "cd nixos; sudo vim configuration.nix; cd ..";
 	eho = "cd nixos; sudo vim home.nix; cd ..";
-	hup = "nh home switch; gpush";
-	cup = "nh os switch; gpush";
-	nixup = "cd ~/nixos; sudo nix flake update; nh os switch; nh home switch; cd ..";
+	hup = "nh home switch; gpush; cd ~/";
+	cup = "nh os switch; gpush; cd ~/";
+	nixup = "cd ~/nixos; sudo nix flake update; nh os switch; nh home switch; git add *; git commit -m 'system update'; git push origin master; cd ..";
 	ssd = "cd /run/media/sho-kun/PortableSSD/Anime/To_Watch";
 	rn = "sub-batch rename";
         impd = "bash ~/impd/impd";
