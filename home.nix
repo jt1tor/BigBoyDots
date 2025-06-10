@@ -73,6 +73,10 @@
     peaclock
     lazygit
     gimp
+    brillo
+    ddcutil
+    scrcpy
+    ncdu
   ];
 
   home.sessionVariables = {
@@ -112,7 +116,19 @@
 
       # zsh startup
       initContent = ''
+
         fastfetch -l "nixos_old_small" --logo-position left
+
+        gpush() {
+          cd ~/nixos
+          git add *
+          echo -n "Enter commit message: "
+          read msg
+          git commit -m "$msg"
+          git push origin master
+          cd ..
+        }
+
       '';
 
       # zsh oh my zsh stuff
@@ -124,11 +140,11 @@
 
       # zsh shell aliases
       shellAliases = {
-        eco = "cd nixos; sudo vim configuration.nix; cd ~/";
-	eho = "cd nixos; sudo vim home.nix; cd ~/";
-	hup = "nh home switch";
-	cup = "nh os switch";
-	nixup = "cd ~/nixos; sudo nix flake update; nh os switch; nh home switch; cd ~/";
+        eco = "cd nixos; sudo vim configuration.nix; cd ..";
+	eho = "cd nixos; sudo vim home.nix; cd ..";
+	hup = "nh home switch; gpush";
+	cup = "nh os switch; gpush";
+	nixup = "cd ~/nixos; sudo nix flake update; nh os switch; nh home switch; cd ..";
 	ssd = "cd /run/media/sho-kun/PortableSSD/Anime/To_Watch";
 	rn = "sub-batch rename";
         impd = "bash ~/impd/impd";

@@ -311,6 +311,7 @@
   libsForQt5.qt5.qtgraphicaleffects
   libsForQt5.qt5.qtquickcontrols2 
   avahi
+  alsa-utils
   ];
 
   # fonts
@@ -333,8 +334,9 @@
 
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = true;
+#  system.autoUpgrade.enable = true;
+#  system.autoUpgrade.allowReboot = true;
+  
 
   nixpkgs.config.allowUnsupportedSystem = true;
 
