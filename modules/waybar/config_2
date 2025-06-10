@@ -1,0 +1,47 @@
+
+{
+    "position": "top",
+    "modules-left": ["hyprland/workspaces", "tray"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "backlight", "battery"],
+
+    "clock": {
+        "format": "{:%H:%M // %m-%d %Y }",
+        "format-alt": "{:%Y-%m-%d}"
+      
+    },
+    "backlight": {
+        "format": "bl:{percent}%"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "btr:{capacity}%",
+        "format-charging": "btr-c:{capacity}%",
+        "format-plugged": "btr-p{capacity}%"
+    },
+    "network": {
+        "format-wifi": "net:\"{essid}\"-{signalStrength}%",
+        "format-ethernet": "net:{ifname}:{ipaddr}/{cidr}",
+        "format-linked": "net:{ifname}:(No IP)",
+        "format-disconnected": "net:Disconnected",
+        "format-alt": "net:{ifname}:{ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "vol:{volume}% {format_source}",
+        "format-bluetooth": "vol:{volume}%",
+        "format-bluetooth-muted": "btmute:{format_source}",
+        "format-muted": "mute:{format_source}",
+        "format-source": "mic:{volume}%",
+        "format-source-muted": "mute-mic",
+        "on-click": "pavucontrol"
+    },
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10,
+      "show-passive-items": true
+    }
+}
