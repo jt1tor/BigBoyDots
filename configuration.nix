@@ -336,7 +336,7 @@
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;
-  system.autoUpgraade.channel = "https://channels.nixos.org/nixos-unstable";
+  system.autoUpgrade.channel = "https://channels.nixos.org/nixos-unstable";
   
 
   nixpkgs.config.allowUnsupportedSystem = true;
