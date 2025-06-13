@@ -98,7 +98,7 @@
     hyprlock.enable = true;
     obs-studio = {
       enable = true;
-      enableVirtualCamera = true;
+#      enableVirtualCamera = true;
       plugins = [
         pkgs.obs-studio-plugins.wlrobs
         pkgs.obs-studio-plugins.obs-pipewire-audio-capture
