@@ -334,8 +334,9 @@
 
   system.stateVersion = "24.05"; # Did you read the comment?
 
-#  system.autoUpgrade.enable = true;
-#  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+  system.autoUpgraade.channel = "https://channels.nixos.org/nixos-unstable";
   
 
   nixpkgs.config.allowUnsupportedSystem = true;
