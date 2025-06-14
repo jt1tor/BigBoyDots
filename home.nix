@@ -104,6 +104,8 @@
         pkgs.obs-studio-plugins.wlrobs
         pkgs.obs-studio-plugins.obs-pipewire-audio-capture
         pkgs.obs-studio-plugins.advanced-scene-switcher
+        pkgs.obs-studio-plugins.obs-vaapi
+        pkgs.obs-studio-plugins.obs-gstreamer
       ];
     };
 
