@@ -47,6 +47,7 @@
     usbmuxd.enable = true;
 
     mullvad-vpn.enable = true;
+    mullvad-vpn.package = pkgs.mullvad-vpn;
 
     avahi.enable = true;
     avahi.openFirewall = true;
