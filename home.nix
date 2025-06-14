@@ -77,6 +77,7 @@
     ddcutil
     scrcpy
     ncdu
+    webcamoid
   ];
 
   home.sessionVariables = {
