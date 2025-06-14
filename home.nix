@@ -78,6 +78,7 @@
     scrcpy
     ncdu
     v4l-utils
+    obs-studio
   ];
 
   home.sessionVariables = {
@@ -97,15 +98,15 @@
     newsboat.enable = true;
     home-manager.enable = true;
     hyprlock.enable = true;
-    obs-studio = {
-      enable = true;
+#    obs-studio = {
+#      enable = true;
 #      enableVirtualCamera = true;
-      plugins = [
-        pkgs.obs-studio-plugins.wlrobs
-        pkgs.obs-studio-plugins.obs-pipewire-audio-capture
-        pkgs.obs-studio-plugins.advanced-scene-switcher
-      ];
-    };
+#      plugins = [
+#        pkgs.obs-studio-plugins.wlrobs
+#        pkgs.obs-studio-plugins.obs-pipewire-audio-capture
+#        pkgs.obs-studio-plugins.advanced-scene-switcher
+#      ];
+#    };
 
     # zsh stuff
     zsh = {
