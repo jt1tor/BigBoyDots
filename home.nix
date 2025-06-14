@@ -77,7 +77,7 @@
     ddcutil
     scrcpy
     ncdu
-    cheese
+    v4l-utils
   ];
 
   home.sessionVariables = {
