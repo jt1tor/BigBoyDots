@@ -312,6 +312,7 @@
   libsForQt5.qt5.qtquickcontrols2 
   avahi
   alsa-utils
+  obs-studio
   ];
 
   # fonts
