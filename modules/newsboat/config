@@ -46,5 +46,5 @@ feedlist-format "%?T?║%4i %n %8u (%T) %t ?"
 
 browser "mpv %u"
 
-macro l set browser "mpv %u" ; open-in-browser; set browser "urlview"
+macro k set browser "mpv %u" ; open-in-browser; set browser "urlview"
 
