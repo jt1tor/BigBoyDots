@@ -332,7 +332,7 @@
     source-han-serif
   ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;

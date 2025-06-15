@@ -4,7 +4,7 @@
   home.username = "sho-kun";
   home.homeDirectory = "/home/sho-kun/";
 
-  home.stateVersion = "24.05"; # Please read the comment before changing.
+  home.stateVersion = "25.11"; # Please read the comment before changing.
 
   nixpkgs.config.allowUnfree = true;
 
