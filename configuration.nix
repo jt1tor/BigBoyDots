@@ -312,7 +312,7 @@
   alsa-utils
   kdePackages.kdenlive
   obs-studio
-  cheese
+  motion
   ];
 
   # fonts
