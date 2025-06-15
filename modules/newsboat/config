@@ -44,6 +44,7 @@ bind-key ^H toggle-show-read-feeds
 
 feedlist-format "%?T?║%4i %n %8u (%T) %t ?"
 
-browser "librewolf"
+browser "mpv %u"
 
-macro l set browser "mpv %u" ; open-in-browser; set browser librewolf
+macro l set browser "mpv %u" ; open-in-browser; set browser "urlview"
+
