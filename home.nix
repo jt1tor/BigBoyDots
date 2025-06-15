@@ -78,7 +78,6 @@
     scrcpy
     ncdu
     v4l-utils
-    kdePackages.kdenlive
   ];
 
   home.sessionVariables = {
