@@ -25,8 +25,10 @@
 
   # Set initial kernel module settings
   boot.extraModprobeConfig = ''
-    options v4l2loopback exclusive_caps=1 card_label="Virtual Camera"
+    options v4l2loopback devices=1 video_nr=1 exclusive_caps=1 card_label="Virtual Camera"
   '';
+
+  security.polkit.enable = true;
 
   networking.hostName = "BigBoy"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
