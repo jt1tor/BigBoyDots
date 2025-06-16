@@ -326,6 +326,8 @@
   motion
   mame
   wine-wayland
+  dotnet-sdk
+  dotnet-runtime
   ];
 
   # fonts
