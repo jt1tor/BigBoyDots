@@ -323,6 +323,7 @@
   obs-studio
   motion
   mame
+  steam-unwrapped
   ];
 
   # fonts
