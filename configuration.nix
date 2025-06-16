@@ -322,6 +322,7 @@
   kdePackages.kdenlive
   obs-studio
   motion
+  mame
   ];
 
   # fonts
