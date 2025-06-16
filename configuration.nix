@@ -176,14 +176,14 @@
   };
 
   # steam
-  programs.steam = {
-    enable = true;
-    protontricks.enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
-    extraCompatPackages = [ pkgs.proton-ge-bin ];
-  };
+#  programs.steam = {
+#    enable = true;
+#    protontricks.enable = true;
+#    remotePlay.openFirewall = true;
+#    dedicatedServer.openFirewall = true;
+#    localNetworkGameTransfers.openFirewall = true;
+#    extraCompatPackages = [ pkgs.proton-ge-bin ];
+#  };
 
   # variables
   environment.sessionVariables = {
@@ -324,10 +324,6 @@
   kdePackages.kdenlive
   obs-studio
   motion
-  mame
-  wine-wayland
-  dotnet-sdk
-  dotnet-runtime
   ];
 
   # fonts
