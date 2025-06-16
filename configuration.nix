@@ -41,6 +41,8 @@
 
   # services
   services = {
+    easyeffects.enable = true;
+
     ratbagd.enable = true;
 
     usbmuxd.enable = true;
