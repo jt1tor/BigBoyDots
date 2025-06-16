@@ -46,7 +46,7 @@
 
   # services
   services = {
-    easyeffects.enable = true;
+#    easyeffects.enable = true;
 
     ratbagd.enable = true;
 

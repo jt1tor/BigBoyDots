@@ -180,7 +180,7 @@
   # services
   services = {
     emacs.enable = true;
-    easyeffects.enable = true;
+#    easyeffects.enable = true;
   };
 
   # dunst source file
