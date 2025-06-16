@@ -10,6 +10,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.plymouth = {
+    enable = true;
+    theme = "bgrt";
+  };
+
   # Make some extra kernel modules available to NixOS
   boot.extraModulePackages = with config.boot.kernelPackages;
     [ v4l2loopback ];
@@ -190,7 +195,7 @@
     gfxmodeEfi = "1920x1080";
     gfxmodeBios = "1920x1080";
   };
-
+  
   # hardware
   hardware = {
     graphics.enable = true;
