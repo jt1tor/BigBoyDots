@@ -181,6 +181,7 @@
     protontricks.enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
   };
 
   # variables
@@ -323,7 +324,6 @@
   obs-studio
   motion
   mame
-  steam-unwrapped
   ];
 
   # fonts
