@@ -325,6 +325,7 @@
   obs-studio
   motion
   mame
+  wine-wayland
   ];
 
   # fonts
