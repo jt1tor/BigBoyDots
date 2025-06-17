@@ -12,6 +12,9 @@
 
   boot.plymouth = {
     enable = true;
+    themePackages = with pkgs; [
+      plymouth-proxzima-theme
+    ];
     theme = "proxzima";
   };
 
