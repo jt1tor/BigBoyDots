@@ -12,7 +12,7 @@
 
   boot.plymouth = {
     enable = true;
-    theme = "bgrt";
+    theme = "proxzima";
   };
 
   # Make some extra kernel modules available to NixOS
