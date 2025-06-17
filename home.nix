@@ -78,7 +78,6 @@
     scrcpy
     ncdu
     v4l-utils
-    light
   ];
 
   home.sessionVariables = {

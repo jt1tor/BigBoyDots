@@ -327,6 +327,7 @@
   kdePackages.kdenlive
   obs-studio
   motion
+  light
   ];
 
   # fonts
