@@ -327,7 +327,7 @@
   kdePackages.kdenlive
   obs-studio
   motion
-  light
+  ddccontrol
   ];
 
   # fonts
