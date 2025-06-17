@@ -49,6 +49,8 @@
 
   # services
   services = {
+    ddccontrol.enable = true;
+
 #    easyeffects.enable = true;
 
     ratbagd.enable = true;
@@ -328,6 +330,7 @@
   obs-studio
   motion
   ddccontrol
+  vlc
   ];
 
   # fonts
