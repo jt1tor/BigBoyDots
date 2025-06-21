@@ -331,6 +331,7 @@
   motion
   ddccontrol
   vlc
+  pipx
   ];
 
   # fonts
