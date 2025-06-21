@@ -279,7 +279,7 @@
   bluetui
   blueman
   git
-  mpd
+###############  mpd
   brightnessctl
   mullvad-vpn
   btop
