@@ -8,7 +8,6 @@
       memo
       modernz
       eisa01.smartskip
-      mpv-playlistmanager
     ];
     config = {
       alang = "ja,jp,jpn,japanese,en,eng,english,English,enUS,en-US";

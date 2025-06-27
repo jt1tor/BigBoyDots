@@ -5,9 +5,9 @@ let
   Aliases = {
     eco = "cd nixos/hosts/BigBoy; sudo vim configuration.nix; cd ..";
     eho = "cd nixos/hosts/BigBoy; vim home.nix; cd ..";
-    nixup = "cd nixos; sudo nix flake update; sudo nixos-rebuild switch --flake .; home-manager switch --flake . -b backup";
-    cup = "cd nixos; sudo nixos-rebuild switch --flake .; cd ..";
-    hup = "cd nixos; home-manager switch --flake . -b backup; cd ..";
+    nixup = "cd nixos; sudo nix flake update; nh os switch; nh home switch; cd ..";
+    cup = "cd nixos; nh os switch; cd ..";
+    hup = "cd nixos; nh home switch; cd ..";
   };
 in
 
@@ -29,5 +29,12 @@ in
       fastfetch
     '';
   };
-
+  programs.nh = {
+    enable = true;
+    flake = "/home/titor/nixos";
+    clean = {
+      enable = true;
+      extraArgs = "--keep 5 --keep-since 5d";
+    };
+  };
 }
