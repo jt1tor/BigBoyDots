@@ -4,6 +4,7 @@
   programs.ncmpcpp = {
     enable = true;
     package = pkgs.ncmpcpp;
+    mpdMusicDir = "/home/titor/Music";
     bindings = [
       { key = "+"; command = [ "show_clock" ]; }
       { key = "="; command = [ "volume_up" ]; }

@@ -8,7 +8,11 @@
     ../../user/pywal/pywal.nix
     ../../user/ncmpcpp/ncmpcpp.nix
     ../../user/mpd/mpd.nix
+    ../../user/fastfetch/fastfetch.nix
     ../../user/git/git.nix
+  ];
+
+  home.packages = with pkgs; [
   ];
 
   home.sessionVariables = {

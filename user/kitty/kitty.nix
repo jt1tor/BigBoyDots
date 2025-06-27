@@ -3,6 +3,7 @@
 {
   programs.kitty = {
     enable = true;
+    themeFile = "base2tone-lavender-dark";
     settings = {
       background_blur = 1;
       enable_audio_bell = "no";
