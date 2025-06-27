@@ -8,12 +8,8 @@
       ../../system/fonts/fonts.nix
       ../../system/bluetooth/bluetooth.nix
       ../../system/sddm/sddm.nix
+      ../../system/boot/boot.nix
     ];
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "BigBoy"; # Define your hostname.
 
