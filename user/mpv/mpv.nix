@@ -3,11 +3,11 @@
 {
   programs.mpv = {
     enable = true;
-    scripts = with mpvScripts; [
+    scripts = with pkgs.mpvScripts; [
       mpvacious
       memo
       modernz
-      eisaa01.smartskip
+      eisa01.smartskip
       mpv-playlistmanager
     ];
     scriptOpts = { };
@@ -32,8 +32,40 @@
       osd-bar-align-y = "-1";
       profile = "gpu-hq";
       hwdec = "auto";
+      gpu-api = "auto";
+      vo = "gpu-next";
+      target-colorspace-hint = "yes";
+      deinterlace = "no";
+      keep-open = "yes";
+      cache-default = 4000000;
     };
-    defaultProfiles = [ ];
-    bindings = { };
+    bindings = {
+      # Subtitle Scale Size
+      "/" = "add sub-scale +0.1";
+      "?" = "add sub-scale -0.1";
+      # Cycle Video Aspect-Ratios
+      "A" = "cycle-values video-aspect '16:9' '16:10' '4:3' '2.35:1' '-1'";
+      # Vim Seek Bindings
+      "h" = "seek -5";
+      "j" = "seek -30";
+      "k" = "seek 30";
+      "l" = "seek 5";
+      # Cycle Subtitles
+      "J" = "cycle sub down";
+      "K" = "cycle sub";
+      # Open Current Subtitle in Jisho.org
+      "Ctrl+j" = "run '/bin/sh' '-c' 'librewolf 'moz-extension://012b4bb2-db52-4849-87ea-564e56d37236/search.html?query=${sub-text}''";
+      # Change Episode in Playlist
+      "<" = "playlist-prev";
+      ">" = "playlist-next";
+      # Change Subtitle Delay
+      "z" = "add sub-delay -0.05";
+      "Z" = "add sub-delay +0.05";
+      "x" = "sub-step -1";
+      "X" = "sub-step 1";
+      # IDK
+      "V" = "script-binding visibility";
+#      "" = "";
+    };
   };
 }
