@@ -11,6 +11,7 @@
     ../../user/fastfetch/fastfetch.nix
     ../../user/git/git.nix
     ../../user/mpv/mpv.nix
+    ../../user/newsboat/newsboat.nix
   ];
 
   home.packages = with pkgs; [

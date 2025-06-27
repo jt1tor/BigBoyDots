@@ -7,17 +7,15 @@
       efi.canTouchEfiVariables = true;
     };
 
-    kernelPackages = with pkgs; [
-      linuxPackages_latest
-    ];
+    kernelPackages = pkgs.linuxPackages_latest;
 
-    kernelModules = [
+#    kernelModules = [
     
-    ];
+#    ];
 
-    extraModulePackages = with config.boot.kernelPackages; [
+#    extraModulePackages = with config.boot.kernelPackages; [
 
-    ];
+#    ];
 
     plymouth = {
       enable = true;
