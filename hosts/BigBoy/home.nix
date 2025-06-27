@@ -10,6 +10,7 @@
     ../../user/mpd/mpd.nix
     ../../user/fastfetch/fastfetch.nix
     ../../user/git/git.nix
+    ../../user/mpv/mpv.nix
   ];
 
   home.packages = with pkgs; [

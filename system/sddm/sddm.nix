@@ -4,6 +4,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    package = pkgs.sddm-chili-theme;
+    theme = "chili";
+    package = pkgs.kdePackages.sddm;
   };
 }
