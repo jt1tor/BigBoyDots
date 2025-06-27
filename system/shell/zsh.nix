@@ -3,11 +3,11 @@
 let
   # shell aliases
   Aliases = {
-    eco = "cd nixos/hosts/BigBoy; sudo vim configuration.nix; cd ../..";
-    eho = "cd nixos/hosts/BigBoy; vim home.nix; cd ../..";
+    eco = "cd nixos/hosts/BigBoy; sudo vim configuration.nix; cd ..";
+    eho = "cd nixos/hosts/BigBoy; vim home.nix; cd ..";
     nixup = "cd nixos; sudo nix flake update; sudo nixos-rebuild switch --flake .; home-manager switch --flake . -b backup";
-    cup = "cd nixos; sudo nixos-rebuild switch --flake .; cd ../..";
-    hup = "cd nixos; home-manager switch --flake . -b backup; cd ../..";
+    cup = "cd nixos; sudo nixos-rebuild switch --flake .; cd ..";
+    hup = "cd nixos; home-manager switch --flake . -b backup; cd ..";
   };
 in
 
@@ -25,6 +25,9 @@ in
       plugins = [ "git" ];
       theme = "refined";
     };
+    shellInit = ''
+      fastfetch
+    '';
   };
 
 }

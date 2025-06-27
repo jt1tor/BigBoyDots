@@ -7,15 +7,15 @@
     settings = {
       logo = {
         type = "kitty";
-        source = "gtr.jpg";
+        source = "~/nixos/user/fastfetch/gtr.jpg";
+        height = 11;
         padding = {
           top = 2;
-          left = 4;
+          left = 5;
         };
       };
       display = {
         separator = "  ── ";
-        constants = "───────";
         key = {
           type = "icon";
           "paddingLeft" = 0;
@@ -23,12 +23,13 @@
       };
       modules = [
         "break"
+        "break"
         {
-          type = "custom"
-          format = "┌{$1} {#1}Hardware Information{#} {$1}┐";
+          type = "custom";
+          format = "┌───────┤ Hardware Information ├───────┐";
         }
         {
-          type = "memory"
+          type = "memory";
           "keyIcon" = "   ";
         }
         {
@@ -36,8 +37,8 @@
           "keyIcon" = "   ";
         }
         {
-          type = "custom"
-          format = "├{$1} {#1}Software Information{#} {$1}┤";
+          type = "custom";
+          format = "├───────┤ Software Information ├───────┤";
         }
         {
           type = "title";
@@ -46,7 +47,7 @@
           format = "{user-name} @ {host-name}";
         }
         {
-          type = "os"
+          type = "os";
           "keyIcon" = "   ";
         }
         {
@@ -63,7 +64,7 @@
         }
         {
           type = "custom";
-          format = "└{$1}──────────────────────{$1}┘";
+          format = "└──────────────────────────────────────┘";
         }
         {
           type = "colors";

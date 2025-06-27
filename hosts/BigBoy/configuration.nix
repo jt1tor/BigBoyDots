@@ -7,6 +7,7 @@
       ../../system/shell/zsh.nix
       ../../system/fonts/fonts.nix
       ../../system/bluetooth/bluetooth.nix
+      ../../system/sddm/sddm.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -50,7 +51,6 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    git
     vim-full
     dunst
     libnotify
@@ -74,6 +74,7 @@
     spotify
     mpv
     vimPlugins.vim-wayland-clipboard
+    kdePackages.sddm
   ];
 
   #  services
