@@ -50,9 +50,43 @@
 
       macro k set browser "mpv %u" ; open-in-browser; set browser "urlview"
     '';
-    queries = {
-      # Life
-      Life = "jay skullz =~ https://www.youtube.com/feeds/videos.xml?channel_id=UCYCO3Kifwg56zhus3XXiAVg";
-    };
   };
+
+  home.file."/home/titor/.config/newsboat/urls".text = ''
+    ### JAPANESE ###
+    https://nyaa.si/?page=rss Nyaa "~nyaa" Torrents
+
+    ### YOUTUBE ###
+    ## STUDY ##
+    https://www.youtube.com/feeds/videos.xml?channel_id=UCMwo6hT5hI3R56rO2HYP-wQ "~james scholz" Study
+    https://www.youtube.com/feeds/videos.xml?channel_id=UC2Zs9v2hL2qZZ7vsAENsg4w "~justin sung" Study
+    https://www.youtube.com/feeds/videos.xml?channel_id=UCYqACVYl0c0BhlVN6X2HIMg "~flipping physics" Study
+    https://www.youtube.com/feeds/videos.xml?channel_id=UCEWpbFLzoYGPfuWUMFPSaoA "~organic chemistry tutor" Study
+
+    ## LIFE ##
+    https://www.youtube.com/feeds/videos.xml?channel_id=UCYCO3Kifwg56zhus3XXiAVg "~jay skullz" Life
+    https://www.youtube.com/feeds/videos.xml?channel_id=UClHVl2N3jPEbkNJVx-ItQIQ "~healthygamergg" Life
+    https://www.youtube.com/feeds/videos.xml?channel_id=UC1Co9XZd52hiVrePGZ8qfoQ "~spoonfedstudy" Life
+    https://www.youtube.com/feeds/videos.xml?channel_id=UCcaWKkWjPre0HyNwVZW5kLA "~haircafe" Life
+    https://www.youtube.com/feeds/videos.xml?channel_id=UCQjBsscIa_mgEnSvWpm_9vw "~odysseas" Life
+
+    ## TECH ##
+    https://www.youtube.com/feeds/videos.xml?channel_id=UCcaTUtGzOiS4cqrgtcsHYWg "~jvscholz" Tech
+    https://www.youtube.com/feeds/videos.xml?channel_id=UCTLUi3oc1-a7dS-2-YgEKmA "~grantcollins" Tech
+    https://www.youtube.com/feeds/videos.xml?channel_id=UCP_eG7JBgRWNlNIOLYS6GZA "~crin" Tech
+
+    ## GYM ##
+    https://www.youtube.com/feeds/videos.xml?channel_id=UCAo68fdu-hYfgO0y0n-J8qg "~trainer winny" Gym
+
+    ## FOOD ##
+    https://www.youtube.com/feeds/videos.xml?channel_id=UCICdNqyJqyHB3_uDVtmFhPA "~cookwell" Food
+
+    ## FUN ##
+    https://www.youtube.com/feeds/videos.xml?channel_id=UC7_YxT-KID8kRbqZo7MyscQ "~markiplier" Fun
+
+    ### REDDIT ###
+    https://www.reddit.com/user/jvscholz/.rss Reddit "~jvscholz" User
+    https://www.reddit.com/r/dumbphones/.rss Reddit "~dumbphones" Sub
+    https://www.reddit.com/r/thinkpadsforsale/.rss Reddit "~thinkpadMarket" Sub
+  '';
 }

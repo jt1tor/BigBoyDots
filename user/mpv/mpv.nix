@@ -70,13 +70,13 @@
     '';
     scriptOpts = {
       subs2srs = {
-#        deck_name = "";
-#        model_name = "";
+        deck_name = "採掘";
+        model_name = "Lapis+";
         # Field Names
-#        sentence_field = "";
+        sentence_field = "Sentence";
 #        secondary_field = "";
-#        audio_field = "";
-#        image_field = "";
+        audio_field = "SentenceAudio";
+        image_field = "DefinitionPicture";
         note_tag = "subs2srs";
         # Menu Font/Size
         menu_font_size = 18;

@@ -11,6 +11,13 @@
       ../../system/boot/boot.nix
     ];
 
+#  virtualisation.virtualbox.host.enable = true;
+#  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+#  programs.virt-manager.enable = true;
+#  users.groups.libvirtd.members = ["your_username"];
+#  virtualisation.libvirtd.enable = true;
+#  virtualisation.spiceUSBRedirection.enable = true;
+
   networking.hostName = "BigBoy"; # Define your hostname.
 
   networking.networkmanager.enable = true;
@@ -40,7 +47,7 @@
   users.users.titor = {
     isNormalUser = true;
     description = "john titor";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [];
   };
 
@@ -68,7 +75,6 @@
     protontricks
     unzip
     spotify
-    mpv
     vimPlugins.vim-wayland-clipboard
     kdePackages.sddm
   ];

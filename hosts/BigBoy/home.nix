@@ -15,6 +15,8 @@
   ];
 
   home.packages = with pkgs; [
+    qbittorrent
+    mpc
   ];
 
   home.sessionVariables = {
