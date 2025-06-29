@@ -5,7 +5,7 @@
     ../../user/hyprland/hyprland.nix
     ../../user/waybar/waybar.nix
     ../../user/kitty/kitty.nix
-    ../../user/pywal/pywal.nix
+#    ../../user/pywal/pywal.nix
     ../../user/ncmpcpp/ncmpcpp.nix
     ../../user/mpd/mpd.nix
     ../../user/fastfetch/fastfetch.nix

@@ -8,5 +8,6 @@
       "drun"
     ];
     font = "Intel One Mono 16";
+    theme = "dmenu";
   };
 }
