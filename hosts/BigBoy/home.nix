@@ -12,6 +12,7 @@
     ../../user/git/git.nix
     ../../user/mpv/mpv.nix
     ../../user/newsboat/newsboat.nix
+    ../../user/rofi/rofi.nix
   ];
 
   home.packages = with pkgs; [

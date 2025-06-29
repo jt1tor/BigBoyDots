@@ -52,7 +52,7 @@
     dunst
     libnotify
     swww
-    rofi-wayland
+#    rofi-wayland
     vesktop
     librewolf-bin
     yazi
