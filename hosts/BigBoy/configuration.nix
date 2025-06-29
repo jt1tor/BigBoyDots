@@ -9,14 +9,8 @@
       ../../system/bluetooth/bluetooth.nix
       ../../system/sddm/sddm.nix
       ../../system/boot/boot.nix
+      ../../system/stylix/stylix.nix
     ];
-
-#  virtualisation.virtualbox.host.enable = true;
-#  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
-#  programs.virt-manager.enable = true;
-#  users.groups.libvirtd.members = ["your_username"];
-#  virtualisation.libvirtd.enable = true;
-#  virtualisation.spiceUSBRedirection.enable = true;
 
   networking.hostName = "BigBoy"; # Define your hostname.
 
@@ -77,6 +71,7 @@
     spotify
     vimPlugins.vim-wayland-clipboard
     kdePackages.sddm
+    obsidian
   ];
 
   #  services

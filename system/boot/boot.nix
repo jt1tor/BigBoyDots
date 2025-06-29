@@ -18,7 +18,7 @@
 #    ];
 
     plymouth = {
-      enable = true;
+      enable = false;
       theme = "proxzima";
       themePackages = with pkgs; [
         plymouth-proxzima-theme
