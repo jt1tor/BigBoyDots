@@ -5,13 +5,13 @@
     enable = true;
     image = ../../wpapers/PurpleLandscape.jpg;
     targets = {
-      vesktop.enable = true;
+#      vesktop.enable = true;
 #      librewolf = {
 #        colorTheme.enable = true;
 #        enable = true;
 #        profileNames = [ "default" ];
 #      };
-      gtk.enable = true;
+#      gtk.enable = true;
 #      hyprland = {
 #        enable = true;
 #        hyprpaper.enable = true;
@@ -22,9 +22,9 @@
 #      };
 #      kitty.enable = true;
 #      mpv.enable = true;
-      vim.enable = true;
-      rofi.enable = true;
-      yazi.enable = true;
+#      vim.enable = true;
+#      rofi.enable = true;
+#      yazi.enable = true;
     };
   };
 }

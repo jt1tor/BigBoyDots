@@ -13,6 +13,7 @@
     ../../user/mpv/mpv.nix
     ../../user/newsboat/newsboat.nix
     ../../user/rofi/rofi.nix
+    ../../user/doom-emacs/doom-emacs.nix
   ];
 
   home.packages = with pkgs; [
