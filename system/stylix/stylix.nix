@@ -4,6 +4,7 @@
   stylix = {
     enable = true;
     image = ../../wpapers/PurpleLandscape.jpg;
+    polarity = "dark";
     targets = {
 #      vesktop.enable = true;
 #      librewolf = {

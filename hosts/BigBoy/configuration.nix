@@ -41,7 +41,7 @@
   users.users.titor = {
     isNormalUser = true;
     description = "john titor";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
 
@@ -63,15 +63,9 @@
     mullvad-vpn
     hyprshot
     udisks2
-    protonup
-    steam
-    mono
-    protontricks
     unzip
     spotify
-    vimPlugins.vim-wayland-clipboard
     kdePackages.sddm
-    obsidian
   ];
 
   #  services
