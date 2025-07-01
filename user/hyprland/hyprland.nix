@@ -1,10 +1,7 @@
 { config, pkgs, ...}:
 
 {
-  home.packages = with pkgs; [
-    hyprpaper
-    hyprlock
-  ];
+  services.hyprpaper.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -235,11 +232,6 @@
     '';
   };
   
-  services.hyprpaper = {
-    enable= true;
-    package = pkgs.hyprpaper;
-  };
-
   # WORK ON THIS
 #  services.hyprlock = {
 #    enable = true;

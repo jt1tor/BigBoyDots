@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   programs.rofi = {
@@ -7,6 +7,6 @@
     modes = [
       "drun"
     ];
-    font = "Intel One Mono 12";
+    font = lib.mkForce "Intel One Mono 12";
   };
 }

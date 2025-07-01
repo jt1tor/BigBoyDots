@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   programs.mpv = {
@@ -15,7 +15,7 @@
       sub-auto = "fuzzy";
       subs-with-matching-audio = "yes";
       sub-file-paths = "ass:srt:sub:subs:subtitles:subs.en:subs.ja";
-      sub-font = "IPAex Mincho";
+      sub-font = lib.mkForce "IPAex Mincho";
       sub-font-size = 30;
       sub-ass-override = "force";
       screenshot-directory = "~/pics/mpv";
@@ -175,8 +175,8 @@
         time_font_size = 18;
         osc_height = 124;
         # Colors
-        seekbarfg_color = "#6e00ff";
-        hover_effect_color = "#6e00ff";
+        seekbarfg_color = lib.mkForce "#6e00ff";
+        hover_effect_color = lib.mkForce "#6e00ff";
       };
     };
   };

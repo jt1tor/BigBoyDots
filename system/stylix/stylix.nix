@@ -11,10 +11,28 @@ in
 
   stylix = {
     enable = true;
-    autoEnable = true;
+    autoEnable = false;
     image = pkgs.fetchurl {
       url = backgroundUrl;
-#      sha256 = backgroundSha256;
+      sha256 = backgroundSha256;
+    };
+    fonts = {
+      serif = {
+        package = pkgs.ipaexfont;
+        name = "IPAex Mincho";
+      };
+      sansSerif = {
+        package = pkgs.ipaexfont;
+        name = "IPAex Gothic";
+      };
+      monospace = {
+        package = pkgs.intel-one-mono;
+        name = "Intel One Mono";
+      };
+      emoji = {
+        package = pkgs.noto-fonts-color-emoji;
+        name = "Noto Color Emoji";
+      };
     };
     polarity = themePolarity;
     base16Scheme = ./. + themePath;

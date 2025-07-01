@@ -7,15 +7,15 @@ let
   backgroundSha256 = builtins.readFile (./. + "../../../themes/"+("/"+userSettings.theme)+"/backgroundsha256.txt");
 in
 {
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
+  imports = [ inputs.stylix.homeModules.stylix ];
 
   home.file.".currenttheme".text = userSettings.theme;
   stylix = {
     enable = true;
-    autoEnable = true;
+    autoEnable = false;
     image = pkgs.fetchurl {
       url = backgroundUrl;
-#      sha256 = backgroundSha256;
+      sha256 = backgroundSha256;
     };
     polarity = themePolarity;
     base16Scheme = ./. + themePath;
@@ -39,7 +39,7 @@ in
     };
   };
 
-  home.file.".config/hypr/hyprpaper.conf".text = ''
+  home.file."~/.config/hypr/hyprpaper.conf".text = ''
     preload = ''+config.stylix.image+''
     wallpaper = ,''+config.stylix.image+''
   '';
