@@ -1,9 +1,9 @@
-{ pkgs, lib, userSettings, inputs,  ... }:
+{ config, pkgs, lib, userSettings, inputs,  ... }:
 
 let
   themePath = "../../../themes/"+("/"+userSettings.theme+"/"+userSettings.theme)+".yaml";
   themePolarity = lib.removeSuffix "\n" (builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/polarity.txt"));
-  backgroundUrl = builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/backgroundurl.txt");
+  backgroundUrl = (./. + "../../../themes"+("/"+userSettings.theme)+"/background");
   backgroundSha256 = builtins.readFile (./. + "../../../themes/"+("/"+userSettings.theme)+"/backgroundsha256.txt");
 in
 {
@@ -12,9 +12,11 @@ in
   stylix = {
     enable = true;
     autoEnable = false;
-    image = pkgs.fetchurl {
-      url = backgroundUrl;
-      sha256 = backgroundSha256;
+    image = backgroundUrl;
+    cursor = {
+      name = if (config.stylix.polarity == "ligh") then "Quintom_Ink" else "Quintom_Snow";
+      package = pkgs.quintom-cursor-theme;
+      size = 20;
     };
     fonts = {
       serif = {

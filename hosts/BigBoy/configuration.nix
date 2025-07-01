@@ -9,6 +9,7 @@
       ../../system/bluetooth/bluetooth.nix
       ../../system/sddm/sddm.nix
       ../../system/boot/boot.nix
+      ../../system/nvidia/nvidia.nix
       ../../system/stylix/stylix.nix
     ];
 
@@ -35,7 +36,6 @@
   services.xserver = {
     xkb.layout = "us";
     xkb.variant = "";
-    videoDrivers = [ "nvidia" ];
   };
 
   users.users.titor = {
@@ -82,24 +82,6 @@
     NIXOS_OZONE_WL = "1";
   };
  
-  hardware = {
-    graphics.enable = true;
-    graphics.enable32Bit = true;
-    nvidia = {
-      nvidiaSettings = true;
-      modesetting.enable = true;
-      powerManagement.enable = false;
-      powerManagement.finegrained = false;
-      open = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-      prime = {
-        sync.enable = true;
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
-    };
-  };
-
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 

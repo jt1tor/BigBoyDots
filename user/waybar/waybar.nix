@@ -8,7 +8,12 @@
       mainBar = {
         layer = "bottom";
         position = "bottom";
-        height = 16;
+        margin-top = 0;
+        margin-bottom = 0;
+        margin-left = 0;
+        margin-right = 0;
+        height = 14;
+        spacing = 6;
         output = [ "eDP-1" "HDMI-A-1" ];
         modules-left = [ "hyprland/workspaces" "mpd" ];
 
@@ -22,6 +27,10 @@
             "3" = "3";
             "4" = "4";
             "5" = "5";
+            "6" = "6";
+            "7" = "7";
+            "8" = "8";
+            "9" = "9";
           };
         };
 
@@ -34,36 +43,29 @@
 
         # Clock Module
         "clock" = {
-          "format" = "󰸗 {:%I:%M %p - %a, %d %b %Y}  ";
+          "format" = "󰸗 {:%I:%M %p - %a, %d %b %Y}";
           "tooltip" = false;
         };
 
-        modules-right = [ "tray" "pulseaudio" "pulseaudio/slider" "cpu" "memory" "battery" "disk" "network" ];
+        modules-right = [ "tray" "pulseaudio" "cpu" "memory" "battery" "disk" "network" ];
 
         # System Tray Module
         "tray" = {
           "icon-size" = 16;
-          "spacing" = 8;
+          "spacing" = 4;
         };
 
         # PulseAudio Module
         "pulseaudio" = {
-          "format" = "  󰕾 {volume}%";
-          "format-muted" = "  Muted {volume}%";
+          "format" = "󰕾 {volume}%";
+          "format-muted" = "Muted {volume}%";
           "scroll-step" = 5;
           "on-click" = "pavucontrol";
         };
 
-        # PulseAudio Slider Module
-        "pulseaudio/slider" = {
-          "min" = 0;
-          "max" = 100;
-          "orientation" = "horizontal";
-        };
-
         # CPU Module
         "cpu" = {
-          "format" = "󰻠 {usage}%  ";
+          "format" = "󰻠 {usage}%";
           "interval" = 1;
           "states" = {
              "critical" = 80;
@@ -72,7 +74,7 @@
 
         # RAM Module
         "memory" = {
-          "format" = "󱤓 {percentage}%  ";
+          "format" = "󱤓 {percentage}%";
           "interval" = 1;
           "states" = {
             "critical" = 80;
@@ -81,7 +83,7 @@
 
         # Battery Module
         "battery" = {
-          "format" = "{icon} {capacity}%  ";
+          "format" = "{icon} {capacity}%";
           "format-icons" = [ "󰂎" "󱊡" "󱊢" "󱊣" ];
           "interval" = 5;
           "states" = {
@@ -92,7 +94,7 @@
 
         # Disk Module
         "disk" = {
-          "format" = "󰆼 {free}  ";
+          "format" = "󰆼 {free}";
           "unit" = "GB";
           "interval" = 30;
           "path" = "/";
@@ -100,70 +102,59 @@
 
         # Network Module
         "network" = {
-          "format-wifi" = "󱚽 {essid}  ";
-          "format-disconnected" = "󰖪 {essid}  ";
+          "format-wifi" = "󱚽 {essid}";
+          "format-disconnected" = "󰖪 {essid}";
         };
       };
     };
     style = ''
       * {
         font-family: Intel One Mono;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: bold;
+        padding: 0;
+        margin: 0;
       }
 
       window#waybar {
-        background-color: rgba(35, 35, 35, 0.65);
-        color: #ffffff;
-      }
-
-      button {
-        box-shadow: inset 0 -3px transparent;
-        border: none;
-        border-radius: 0;
-      }
-
-      button:hover {
-        background: inherit;
-        box-shadow: inset 0 -3px #ffffff;
+        background-color: transparent;
+        border-radius: 18;
       }
 
       #workspaces button {
-        padding: 0 5px;
         background-color: transparent;
-        color: #ffffff;
+        color: #00ff00;
+        border-radius: 18px;
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-left: 3px;
+        margin-right: 3px;
       }
 
-      #workspaces button:hover {
-        background: rgba(0, 0, 0, 0.2);
+      #workspaces {
+        margin-bottom: 6px;
+        margin-left: 6px;
+        border-radius: 18px;
       }
 
-      #workspaces button:focused {
-        background-color: #ffffff;
-        box-shadow: inset 0 -3px #ffffff;
+      #mpd,
+      #clock,
+      #tray,
+      #pulseaudio,
+      #cpu,
+      #memory,
+      #battery,
+      #disk,
+      #network {
+        margin-top: 0px;
+        margin-bottom: 6px;
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 18px;
       }
 
-      #pulseaudio-slider slider {
-        min-height: 0px;
-        min-width: 0px;
-        opacity: 0;
-        background-image: none;
-        border: none;
-        border-radius: 0px;
-        box-shadow: none;
-      }
-
-      #pulseaudio-slider trough {
-        min-height: 6px;
-        min-width: 100px;
-        border-radius: 8px;
-        background-color: black;
-      }
-
-      #pulseaudio-slider highlight {
-        min-height: 6px;
-        border-radius: 8px;
-        background-color: white;
+      #network {
+        margin-right: 6px;
       }
 
     '';

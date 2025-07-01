@@ -1,7 +1,14 @@
 { config, pkgs, ...}:
 
 {
-  services.hyprpaper.enable = true;
+  home.packages = with pkgs; [
+    hyprpaper
+    hyprlock
+  ];
+
+  services.hyprpaper = {
+    enable = true;
+  };
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -10,8 +17,8 @@
     ];
     extraConfig = ''
       ### MONITORS ###
-      monitor=eDP-1,1920x1080@300,0x0,1
-      monitor=HDMI-A-1,1920x1080@239.96,1920x0,1
+      monitor=eDP-1,1920x1080@60,0x0,1
+      monitor=HDMI-A-1,highrr,1920x0,1
       
       ### MY PROGRAMS ###
       $terminal = kitty
@@ -25,6 +32,7 @@
       exec-once = dunst
       exec-once = mpd
       exec-once = udiskie -t -a -n
+      exec-once = hyprctl hyprpaper preload ''+config.stylix.image+''; hyprctl hyprpaper wallpaper ,''+config.stylix.image+''
       
       ### ENVIRONMENT VARIABLES ###
       env = LIBVA_DRIVER_NAME, nvidia
@@ -46,7 +54,7 @@
           col.active_border = rgb(ffffff)
           col.inactive_border = rgba(595959aa)
           resize_on_border = false
-          allow_tearing = false
+          allow_tearing = true
           layout = master
       }
       
@@ -66,7 +74,7 @@
               enabled = true
               size = 3
               passes = 3
-               vibrancy = 1
+              vibrancy = 1
           }
       }
       
@@ -98,6 +106,15 @@
       misc {
           force_default_wallpaper = 1 # Set to 0 or 1 to disable the anime mascot wallpapers
           disable_hyprland_logo = true # If true disables the random hyprland logo / anime girl background. :(
+
+      }
+
+      opengl {
+          nvidia_anti_flicker = true
+      }
+
+      debug {
+          damage_tracking = 0
       }
       
       ### INPUT ###
@@ -127,10 +144,7 @@
       
       ### CURSOR ###
       cursor {
-          no_hardware_cursors = 1
-          min_refresh_rate = 240
-#          no_break_fs_vrr = 1
-          inactive_timeout = 4
+          inactive_timeout = 5
           default_monitor = HDMI-A-1
       }
       
@@ -230,17 +244,5 @@
 
       windowrule = opacity 1, class:mpv
     '';
-  };
-  
-  # WORK ON THIS
-#  services.hyprlock = {
-#    enable = true;
-#    package = pkgs.hyprlock;
-#  };
-
-  gtk.cursorTheme = {
-    package = pkgs.quintom-cursor-theme;
-    name = if (config.stylix.polarity == "light") then "Quintom_Ink" else "Quintom_Snow";
-    size = 20;
   };
 }

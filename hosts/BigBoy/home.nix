@@ -26,12 +26,12 @@
     EDITOR = "vim";
   };
 
-#  home.pointerCursor = {
-#    enable = true;
-#    name = "Vanilla-DMZ";
-#    package = pkgs.vanilla-dmz;
-#    size = 18;
-#  };
+  home.pointerCursor = {
+    enable = true;
+    name = if (config.stylix.polarity == "light") then "Quintom_Ink" else "Quintom_Snow";
+    package = pkgs.quintom-cursor-theme;
+    size = 18;
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

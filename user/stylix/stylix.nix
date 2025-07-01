@@ -36,8 +36,9 @@ in
     };
   };
 
-  home.file."~/.config/hypr/hyprpaper.conf".text = ''
-    preload = ''+config.stylix.image+''
-    wallpaper = ,''+config.stylix.image+''
+  home.file."/.config/hypr/hyprpaper.conf".text = ''
+    preload = ''+backgroundUrl+''
+
+    wallpaper = ,''+backgroundUrl+''
   '';
 }
