@@ -3,8 +3,8 @@
 let
   themePath = "../../../themes"+("/"+userSettings.theme+"/"+userSettings.theme)+".yaml";
   themePolarity = lib.removeSuffix "\n" (builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/polarity.txt"));
-  backgroundUrl = builtins.readFile (./. + "../../../themes"+("/"+userSettings.theme)+"/backgroundurl.txt");
-  backgroundSha256 = builtins.readFile (./. + "../../../themes/"+("/"+userSettings.theme)+"/backgroundsha256.txt");
+  backgroundUrl = (./. + "../../../themes"+("/"+userSettings.theme)+"/background");
+#  backgroundSha256 = builtins.readFile (./. + "../../../themes/"+("/"+userSettings.theme)+"/backgroundsha256.txt");
 in
 {
   imports = [ inputs.stylix.homeModules.stylix ];
@@ -13,10 +13,7 @@ in
   stylix = {
     enable = true;
     autoEnable = false;
-    image = pkgs.fetchurl {
-      url = backgroundUrl;
-      sha256 = backgroundSha256;
-    };
+    image = backgroundUrl;
     polarity = themePolarity;
     base16Scheme = ./. + themePath;
     targets = {
