@@ -1,9 +1,16 @@
 { config, pkgs, ...}:
 
 {
+  home.packages = with pkgs; [
+    hyprpaper
+    hyprlock
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
-    plugins = [ ];
+    plugins = [
+       
+    ];
     extraConfig = ''
       ### MONITORS ###
       monitor=eDP-1,1920x1080@300,0x0,1

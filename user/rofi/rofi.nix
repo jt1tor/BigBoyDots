@@ -7,7 +7,6 @@
     modes = [
       "drun"
     ];
-    font = "Intel One Mono 16";
-    theme = "dmenu";
+    font = "Intel One Mono 12";
   };
 }

@@ -14,6 +14,7 @@
     ../../user/newsboat/newsboat.nix
     ../../user/rofi/rofi.nix
     ../../user/doom-emacs/doom-emacs.nix
+    ../../user/stylix/stylix.nix
   ];
 
   home.packages = with pkgs; [
