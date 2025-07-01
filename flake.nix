@@ -25,6 +25,7 @@
         wm = "hyprland";
         term = "kitty";
         font = "Intel One Mono";
+        dotfilesDir = "~/nixos";
       };
     in
   {
