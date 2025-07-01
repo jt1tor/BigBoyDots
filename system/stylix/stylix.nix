@@ -5,6 +5,11 @@
     enable = true;
     image = ../../wpapers/PurpleLandscape.jpg;
     polarity = "dark";
+    cursor = {
+      name = "Banana-Red";
+      package = pkgs.banana-cursor;
+      size = 20;
+    };
     targets = {
 #      vesktop.enable = true;
 #      librewolf = {

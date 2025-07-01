@@ -15,8 +15,8 @@
       sub-auto = "fuzzy";
       subs-with-matching-audio = "yes";
       sub-file-paths = "ass:srt:sub:subs:subtitles:subs.en:subs.ja";
-      sub-font = "IPAex Gothic";
-      sub-font-size = 32;
+      sub-font = "IPAex Mincho";
+      sub-font-size = 30;
       sub-ass-override = "force";
       screenshot-directory = "~/pics/mpv";
       screenshot-template = "%F_%wHh%wMm%wSs%wTms";
@@ -79,7 +79,7 @@
         image_field = "DefinitionPicture";
         note_tag = "subs2srs";
         # Menu Font/Size
-        menu_font_size = 18;
+        menu_font_size = 12;
         menu_font_name = "IPAex Gothic";
         # Server Settings
         ankiconnect_url = "127.0.0.1:8765";
@@ -180,4 +180,6 @@
       };
     };
   };
+
+  home.file."/home/titor/.config/mpv/scripts/next_episode/main.lua" = ./scripts/next_episode/main.lua;
 }
