@@ -15,8 +15,8 @@
       $menu = rofi -show drun -show-icons
       
       ### AUTOSTART ###
-      exec-once = swww-daemon
-      exec-once = swww-restore
+#      exec-once = swww-daemon
+#      exec-once = swww-restore
       exec-once = waybar
       exec-once = dunst
       exec-once = mpd
@@ -226,5 +226,22 @@
 
       windowrule = opacity 1, class:mpv
     '';
+  };
+  
+  services.hyprpaper = {
+    enable= true;
+    package = pkgs.hyprpaper;
+  };
+
+  # WORK ON THIS
+#  services.hyprlock = {
+#    enable = true;
+#    package = pkgs.hyprlock;
+#  };
+
+  gtk.cursorTheme = {
+    package = pkgs.quintom-cursor-theme;
+    name = if (config.stylix.polarity = "light") then "Quintom_Ink" else "Quintom_Snow";
+    size = 20;
   };
 }

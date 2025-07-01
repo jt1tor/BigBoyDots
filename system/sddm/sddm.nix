@@ -5,6 +5,6 @@
     enable = true;
     wayland.enable = true;
     theme = "chili";
-    package = pkgs.kdePackages.sddm;
+    package = pkgs.sddm;
   };
 }

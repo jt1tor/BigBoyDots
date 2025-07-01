@@ -1,4 +1,4 @@
-{ config, pkgs, lib, userSettings, inputs, ... }:
+{ config, pkgs, userSettings, inputs, lib, ... }:
 
 let
   themePath = "../../themes/"+userSettings.theme+"/"+userSettings.theme+".yaml";
@@ -9,6 +9,7 @@ in
 {
   imports = [ inputs.stylix.homeManagerModules.stylix ];
 
+  home.file.".currenttheme".text = userSettings.theme;
   stylix = {
     enable = true;
     image = pkgs.fetchurl {
@@ -17,6 +18,16 @@ in
     };
     polarity = themePolarity;
     base16Scheme = ./. + themePath;
-    targets.console.enable = true;
+    targets = {
+      kitty.enable = true;
+      gtk.enable = true;
+      rofi.enable = true;
+    };
   };
+
+  home.file.".config/hypr/hyprpaper.conf".text = ''
+    preload = ''+config.stylix.image+''
+
+    wallpaper = ,''+config.stylix.image+''
+  '';
 }
