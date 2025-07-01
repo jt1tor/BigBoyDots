@@ -13,24 +13,12 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }:
-
+  outputs = inputs@{ self, nixpkgs, home-manager, stylix, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      nixosConfigurations = {
-        BigBoy = lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./hosts/BigBoy/configuration.nix
-            stylix.nixosModules.stylix
-          ];
-        };
-      };
 
-    let
       userSettings = rec {
         username = "titor";
         theme = "HollowPurple";
@@ -38,17 +26,34 @@
         term = "kitty";
         font = "Intel One Mono";
       };
-    in {
-      homeConfigurations = {
-        titor = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./hosts/BigBoy/home.nix
-          ];
-          extraSpecialArgs = {
-            inherit userSettings;
-          };
+    in
+  {
+    homeConfigurations = {
+      titor = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./hosts/BigBoy/home.nix
+        ];
+        extraSpecialArgs = {
+          inherit userSettings;
+          inherit inputs;
         };
       };
     };
+
+    nixosConfigurations = {
+      BigBoy = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/BigBoy/configuration.nix
+#          stylix.nixosModules.stylix
+          ./system/stylix/stylix.nix
+        ];
+        specialArgs = {
+          inherit userSettings;
+          inherit inputs;
+        };
+      };
+    };
+  };
 }
