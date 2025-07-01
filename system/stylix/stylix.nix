@@ -6,9 +6,9 @@
     image = ../../wpapers/PurpleLandscape.jpg;
     polarity = "dark";
     cursor = {
-      name = "Banana-Red";
-      package = pkgs.banana-cursor;
-      size = 20;
+      name = "Vanilla-DMZ";
+      package = pkgs.vanilla-dmz;
+      size = 16;
     };
     targets = {
 #      vesktop.enable = true;

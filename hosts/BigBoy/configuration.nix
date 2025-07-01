@@ -52,7 +52,6 @@
     dunst
     libnotify
     swww
-#    rofi-wayland
     vesktop
     librewolf-bin
     yazi
@@ -66,6 +65,7 @@
     unzip
     spotify
     kdePackages.sddm
+    wl-clipboard
   ];
 
   #  services

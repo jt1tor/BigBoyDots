@@ -87,7 +87,7 @@
           preserve_split = true # You probably want this
       }
       
-      master {
+      master { 
           new_status = master
       }
       
@@ -223,6 +223,8 @@
       
       # Fix some dragging issues with XWayland
       windowrule = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:-1
+
+      windowrule = opacity 1, class:mpv
     '';
   };
 }

@@ -3,7 +3,6 @@
 {
   programs.kitty = {
     enable = true;
-    themeFile = "base2tone-lavender-dark";
     settings = {
       background_blur = 1;
       enable_audio_bell = "no";
@@ -15,6 +14,7 @@
       confirm_os_window_close = 0;
     };
     extraConfig = ''
+      include ~/.cache/wal/colors-kitty.conf
     '';
   };
 }

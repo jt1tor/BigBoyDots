@@ -181,5 +181,5 @@
     };
   };
 
-  home.file."/home/titor/.config/mpv/scripts/next_episode/main.lua" = ./scripts/next_episode/main.lua;
+  home.file."/home/titor/.config/mpv/scripts/next_episode/main.lua".source = ./scripts/next_episode/main.lua;
 }

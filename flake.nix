@@ -20,22 +20,35 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
+      nixosConfigurations = {
+        BigBoy = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts/BigBoy/configuration.nix
+            stylix.nixosModules.stylix
+          ];
+        };
+      };
 
-    nixosConfigurations = {
-      BigBoy = lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./hosts/BigBoy/configuration.nix
-          stylix.nixosModules.stylix
-        ];
+    let
+      userSettings = rec {
+        username = "titor";
+        theme = "HollowPurple";
+        wm = "hyprland";
+        term = "kitty";
+        font = "Intel One Mono";
+      };
+    in {
+      homeConfigurations = {
+        titor = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./hosts/BigBoy/home.nix
+          ];
+          extraSpecialArgs = {
+            inherit userSettings;
+          };
+        };
       };
     };
-
-    homeConfigurations = {
-      titor = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [ ./hosts/BigBoy/home.nix ];
-      };
-    };
-  };
 }
