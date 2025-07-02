@@ -15,15 +15,16 @@
     ../../user/rofi/rofi.nix
     ../../user/doom-emacs/doom-emacs.nix
     ../../user/stylix/stylix.nix
+    ../../user/impd/impd.nix
   ];
 
   home.packages = with pkgs; [
     qbittorrent
-    mpc
+    neovim
   ];
 
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "emacsclient -c -nw";
   };
 
   home.pointerCursor = {

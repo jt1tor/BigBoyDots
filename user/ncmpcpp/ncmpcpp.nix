@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    mpc
+  ];
   programs.ncmpcpp = {
     enable = true;
     package = pkgs.ncmpcpp;

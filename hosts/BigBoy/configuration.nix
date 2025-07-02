@@ -52,12 +52,10 @@
     vim-full
     dunst
     libnotify
-    swww
     vesktop
     librewolf-bin
     yazi
     anki
-    ncmpcpp
     mpd
     udiskie
     mullvad-vpn
@@ -85,7 +83,6 @@
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
