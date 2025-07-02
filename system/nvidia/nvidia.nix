@@ -10,7 +10,7 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
     open = false;
     prime = {
       sync.enable = true;
@@ -18,10 +18,4 @@
       nvidiaBusId = "PCI:1:0:0";
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    nvidia-x11
-    nvidia-persistenced
-    nvidia-settings
-  ];
 }

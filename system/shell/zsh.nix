@@ -14,6 +14,7 @@ in
 {
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
+  homeBinInPath = true;
   programs.zsh = {
     enable = true;
     autosuggestions.enable = true;

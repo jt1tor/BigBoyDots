@@ -79,8 +79,8 @@
         image_field = "DefinitionPicture";
         note_tag = "subs2srs";
         # Menu Font/Size
-        menu_font_size = 12;
-        menu_font_name = "IPAex Gothic";
+        menu_font_size = 10;
+        menu_font_name = "IPAex Mincho";
         # Server Settings
         ankiconnect_url = "127.0.0.1:8765";
         # Toggleables

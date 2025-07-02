@@ -7,4 +7,8 @@
     theme = "chili";
     package = pkgs.kdePackages.sddm;
   };
+
+  environment.systemPackages = with pkgs; [
+    sddm-chili-theme
+  ];
 }

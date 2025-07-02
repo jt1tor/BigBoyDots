@@ -11,6 +11,7 @@
       ../../system/boot/boot.nix
       ../../system/nvidia/nvidia.nix
       ../../system/stylix/stylix.nix
+      ../../system/audio/audio.nix
     ];
 
   networking.hostName = "BigBoy"; # Define your hostname.
@@ -60,11 +61,9 @@
     mpd
     udiskie
     mullvad-vpn
-    hyprshot
     udisks2
     unzip
     spotify
-    kdePackages.sddm
     wl-clipboard
   ];
 
@@ -84,15 +83,6 @@
  
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
 
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).

@@ -40,7 +40,6 @@
       env = ELECTRON_OZONE_PLATFORM_HINT, auto
       env = GBM_BACKEND, nvidia-drm
       env = SDL_VIDEODRIVER, wayland
-      env = WLR_NO_HARDWARE_CURSORS, 1
       env = WLR_RENDERER_ALLOW_SOFTWARE, 1
       
       ### PERMISSIONS ###
@@ -54,15 +53,15 @@
           col.active_border = rgb(ffffff)
           col.inactive_border = rgba(595959aa)
           resize_on_border = false
-          allow_tearing = true
+          allow_tearing = false
           layout = master
       }
       
       decoration {
           rounding = 6
           rounding_power = 2
-          active_opacity = .92
-          inactive_opacity = .78
+          active_opacity = 1
+          inactive_opacity = .95
           fullscreen_opacity = 1
           shadow {
               enabled = true
@@ -146,6 +145,7 @@
       cursor {
           inactive_timeout = 5
           default_monitor = HDMI-A-1
+          no_hardware_cursors = true
       }
       
       ### KEYBINDINGS ###
