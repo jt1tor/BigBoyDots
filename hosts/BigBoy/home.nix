@@ -16,12 +16,13 @@
     ../../user/doom-emacs/doom-emacs.nix
     ../../user/stylix/stylix.nix
     ../../user/impd/impd.nix
-    ../../user/input/input.nix
+#    ../../user/input/input.nix
   ];
 
   home.packages = with pkgs; [
     qbittorrent
     neovim
+    sub-batch
   ];
 
   home.sessionVariables = {
