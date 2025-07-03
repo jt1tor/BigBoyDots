@@ -16,6 +16,7 @@
     ../../user/doom-emacs/doom-emacs.nix
     ../../user/stylix/stylix.nix
     ../../user/impd/impd.nix
+    ../../user/input/input.nix
   ];
 
   home.packages = with pkgs; [
@@ -26,6 +27,10 @@
   home.sessionVariables = {
     EDITOR = "emacsclient -c -nw";
   };
+
+  home.sessionPath = [
+    "$HOME/bin"
+  ];
 
   home.pointerCursor = {
     enable = true;
