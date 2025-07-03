@@ -17,6 +17,7 @@
     ../../user/stylix/stylix.nix
     ../../user/impd/impd.nix
 #    ../../user/input/input.nix
+    ../../user/yt-dlp/yt-dlp.nix
   ];
 
   home.packages = with pkgs; [
