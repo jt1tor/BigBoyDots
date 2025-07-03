@@ -51,7 +51,7 @@
 
         # System Tray Module
         "tray" = {
-          "icon-size" = 16;
+          "icon-size" = 24;
           "spacing" = 4;
         };
 
@@ -118,13 +118,13 @@
 
       window#waybar {
         background-color: transparent;
-        border-radius: 18;
+        border-radius: 6;
       }
 
       #workspaces button {
         background-color: transparent;
         color: #00ff00;
-        border-radius: 18px;
+        border-radius: 6px;
         padding-left: 6px;
         padding-right: 6px;
         margin-left: 3px;
@@ -134,7 +134,7 @@
       #workspaces {
         margin-bottom: 6px;
         margin-left: 6px;
-        border-radius: 18px;
+        border-radius: 6px;
       }
 
       #mpd,
@@ -150,7 +150,7 @@
         margin-bottom: 6px;
         padding-left: 6px;
         padding-right: 6px;
-        border-radius: 18px;
+        border-radius: 6px;
       }
 
       #network {
