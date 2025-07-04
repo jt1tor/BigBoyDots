@@ -18,16 +18,16 @@
     ../../user/impd/impd.nix
 #    ../../user/input/input.nix
     ../../user/yt-dlp/yt-dlp.nix
+    ../../user/nvim/nvim.nix
   ];
 
   home.packages = with pkgs; [
     qbittorrent
-    neovim
     sub-batch
   ];
 
   home.sessionVariables = {
-    EDITOR = "emacsclient -c -nw";
+    EDITOR = "emacs -nw";
   };
 
   home.sessionPath = [

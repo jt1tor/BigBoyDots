@@ -53,8 +53,10 @@
   };
 
   home.file."/home/titor/.config/newsboat/urls".text = ''
+    ### NEWSLETTERS ###
+    https://kill-the-newsletter.com/feeds/wd8hjqolgjogk3enorjw.xml "~ICanStudy" Study
     ### JAPANESE ###
-    https://nyaa.si/?page=rss Nyaa "~nyaa" Torrents
+    https://nyaa.si/?page=rss "~nyaa" Torrents
 
     ### YOUTUBE ###
     ## STUDY ##
@@ -85,8 +87,8 @@
     https://www.youtube.com/feeds/videos.xml?channel_id=UC7_YxT-KID8kRbqZo7MyscQ "~markiplier" Fun
 
     ### REDDIT ###
-    https://www.reddit.com/user/jvscholz/.rss Reddit "~jvscholz" User
-    https://www.reddit.com/r/dumbphones/.rss Reddit "~dumbphones" Sub
-    https://www.reddit.com/r/thinkpadsforsale/.rss Reddit "~thinkpadMarket" Sub
+    https://www.reddit.com/user/jvscholz/.rss "~jvscholz" User
+    https://www.reddit.com/r/dumbphones/.rss "~dumbphones" Sub
+    https://www.reddit.com/r/thinkpadsforsale/.rss "~thinkpadMarket" Sub
   '';
 }
