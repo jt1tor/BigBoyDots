@@ -122,7 +122,7 @@
           kb_layout = us
           kb_variant =
           kb_model =
-          kb_options = ctrl:swapcaps
+          kb_options =
           kb_rules =
           repeat_delay = 150
           repeat_rate = 50

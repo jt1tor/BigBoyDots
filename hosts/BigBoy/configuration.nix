@@ -13,6 +13,7 @@
       ../../system/stylix/stylix.nix
       ../../system/audio/audio.nix
       ../../system/input/input.nix
+      ../../system/keyd/keyd.nix
     ];
 
   networking.hostName = "BigBoy"; # Define your hostname.
