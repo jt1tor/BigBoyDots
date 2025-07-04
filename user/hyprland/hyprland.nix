@@ -5,6 +5,7 @@
     hyprpaper
     hyprshot
     hyprlock
+    brightnessctl
   ];
 
   services.hyprpaper = {
