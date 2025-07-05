@@ -19,6 +19,7 @@
 #    ../../user/input/input.nix
     ../../user/yt-dlp/yt-dlp.nix
     ../../user/nvim/nvim.nix
+    ../../user/iamb/iamb.nix
   ];
 
   home.packages = with pkgs; [
@@ -27,7 +28,7 @@
   ];
 
   home.sessionVariables = {
-    EDITOR = "emacs -nw";
+    EDITOR = "nvim";
   };
 
   home.sessionPath = [
@@ -38,7 +39,7 @@
     enable = true;
     name = if (config.stylix.polarity == "light") then "Quintom_Ink" else "Quintom_Snow";
     package = pkgs.quintom-cursor-theme;
-    size = 12;
+    size = 10;
   };
 
   # Let Home Manager install and manage itself.
