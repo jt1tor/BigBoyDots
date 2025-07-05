@@ -10,7 +10,7 @@
       settings = {
         default_room = "#home";
         username_display = "username";
-        user_gutter_width = "24";
+        user_gutter_width = 24;
         request_timeout = 300;
       };
 
@@ -37,7 +37,7 @@
       };
 
       settings.sort = {
-        rooms = [ "recent", "favorite", "unread",  "name", "lowpriority" ];
+        rooms = [ "recent" "favorite" "unread"  "name" "lowpriority" ];
       };
 
       layout = {
@@ -56,27 +56,3 @@
     };
   };
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

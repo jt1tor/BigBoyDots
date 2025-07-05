@@ -172,6 +172,7 @@
       bind = $mainMod, W, exec, librewolf
       bind = $mainMod, N, exec, kitty -e newsboat
       bind = $mainMod, M, exec, kitty -e ncmpcpp
+      bind = $mainMod, I, exec, kitty -e iamb
       
       # Move focus with mainMod + arrow keys
       bind = $mainMod, H, movefocus, l
