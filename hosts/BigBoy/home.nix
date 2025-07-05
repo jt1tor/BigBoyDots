@@ -20,6 +20,7 @@
     ../../user/yt-dlp/yt-dlp.nix
     ../../user/nvim/nvim.nix
     ../../user/iamb/iamb.nix
+    ../../user/yazi/yazi.nix
   ];
 
   home.packages = with pkgs; [
@@ -28,7 +29,7 @@
   ];
 
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "vi";
   };
 
   home.sessionPath = [

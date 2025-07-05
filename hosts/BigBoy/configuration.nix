@@ -56,7 +56,6 @@
     libnotify
     vesktop
     librewolf-bin
-    yazi
     anki
     mpd
     udiskie
