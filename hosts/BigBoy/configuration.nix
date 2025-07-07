@@ -64,6 +64,7 @@
     unzip
     spotify
     wl-clipboard
+    steam
   ];
 
   #  services

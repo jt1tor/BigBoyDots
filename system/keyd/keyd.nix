@@ -20,6 +20,9 @@
           capslock = overload(control, esc)
           \ = backspace
           backspace = \
+          left = noop
+          down = noop
+          right = noop
 
           up = layer(nav)
           [nav]

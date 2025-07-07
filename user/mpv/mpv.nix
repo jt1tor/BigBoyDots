@@ -73,7 +73,7 @@
         deck_name = "採掘";
         model_name = "Lapis+";
         # Field Names
-        sentence_field = "Sentence";
+#        sentence_field = "Sentence";
 #        secondary_field = "";
         audio_field = "SentenceAudio";
         image_field = "DefinitionPicture";
