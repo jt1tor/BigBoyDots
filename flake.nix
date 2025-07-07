@@ -21,7 +21,7 @@
 
       userSettings = rec {
         username = "titor";
-        theme = "HollowPurple";
+        theme = "Nord";
         wm = "hyprland";
         term = "kitty";
         font = "Intel One Mono";
