@@ -65,6 +65,8 @@
     spotify
     wl-clipboard
     steam
+    woeusb
+    woeusb-ng
   ];
 
   #  services

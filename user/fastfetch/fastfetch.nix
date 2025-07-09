@@ -6,12 +6,12 @@
     package = pkgs.fastfetch;
     settings = {
       logo = {
-        type = "kitty";
-        source = "~/nixos/user/fastfetch/gtr.jpg";
+        type = "file";
+        source = "~/nixos/user/fastfetch/nixlogo.txt";
         height = 11;
         padding = {
           top = 2;
-          left = 5;
+          left = 3;
         };
       };
       display = {
