@@ -67,6 +67,8 @@
     steam
     woeusb
     woeusb-ng
+    gparted
+    ffmpeg-full
   ];
 
   #  services
