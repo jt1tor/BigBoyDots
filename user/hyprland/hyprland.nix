@@ -19,7 +19,7 @@
     ];
     extraConfig = ''
       ### MONITORS ###
-      monitor=eDP-1,1920x1080@60,0x0,1
+      monitor=eDP-1,highres,0x0,1
       monitor=HDMI-A-1,highrr,1920x0,1
       
       ### MY PROGRAMS ###

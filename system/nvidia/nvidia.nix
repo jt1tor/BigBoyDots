@@ -10,8 +10,11 @@
     services.xserver.videoDrivers = [ "nvidia" ];
 
     hardware.nvidia = {
+      forceFullCompositionPipeline = true;
       modesetting.enable = true;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
+      open = false;
+      nvidiaSettings = true;
       prime = {
         sync.enable = true;
         intelBusId = "PCI:0:2:0";
