@@ -118,13 +118,13 @@
 
       window#waybar {
         background-color: transparent;
-        border-radius: 6;
+        border-radius: 0;
       }
 
       #workspaces button {
         background-color: transparent;
         color: #00ff00;
-        border-radius: 6px;
+        border-radius: 0px;
         padding-left: 6px;
         padding-right: 6px;
         margin-left: 3px;
@@ -134,7 +134,7 @@
       #workspaces {
         margin-bottom: 6px;
         margin-left: 6px;
-        border-radius: 6px;
+        border-radius: 0px;
       }
 
       #mpd,
@@ -150,7 +150,7 @@
         margin-bottom: 6px;
         padding-left: 6px;
         padding-right: 6px;
-        border-radius: 6px;
+        border-radius: 0px;
       }
 
       #network {

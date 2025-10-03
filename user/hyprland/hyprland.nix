@@ -35,6 +35,7 @@
       exec-once = mpd
       exec-once = udiskie -t -a -n
       exec-once = hyprctl hyprpaper preload ''+config.stylix.image+''; hyprctl hyprpaper wallpaper ,''+config.stylix.image+''
+      exec-once = emacs --daemon
       
       ### ENVIRONMENT VARIABLES ###
       env = LIBVA_DRIVER_NAME, nvidia
@@ -60,8 +61,8 @@
       }
       
       decoration {
-          rounding = 6
-          rounding_power = 2
+          rounding = 0
+          rounding_power = 1
           active_opacity = 1
           inactive_opacity = .95
           fullscreen_opacity = 1
