@@ -21,7 +21,7 @@
     ../../user/nvim/nvim.nix
     ../../user/iamb/iamb.nix
     ../../user/yazi/yazi.nix
-    ../../user/anki/anki.nix
+#    ../../user/anki/anki.nix
   ];
 
   home.packages = with pkgs; [
@@ -29,6 +29,7 @@
     sub-batch
     termpdfpy
     sioyek
+    pavucontrol
   ];
 
   home.sessionVariables = {

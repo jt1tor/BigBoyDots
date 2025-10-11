@@ -10,7 +10,6 @@
     services.xserver.videoDrivers = [ "nvidia" ];
 
     hardware.nvidia = {
-      forceFullCompositionPipeline = true;
       modesetting.enable = true;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       open = false;
