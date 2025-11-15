@@ -3,7 +3,7 @@
 {
   imports = [
     ../../user/hyprland/hyprland.nix
-    ../../user/i3/i3.nix
+#    ../../user/i3/i3.nix
     ../../user/waybar/waybar.nix
     ../../user/kitty/kitty.nix
 #    ../../user/pywal/pywal.nix

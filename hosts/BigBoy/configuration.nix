@@ -94,6 +94,19 @@
     xwayland.enable = true;
   };
 
+  { config, pkgs, ... }:
+
+  {
+    services.xserver.windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [
+        dmenu
+        i3blocks
+      ];
+    };
+  }
+
+
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
