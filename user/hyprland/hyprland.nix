@@ -19,8 +19,8 @@
     ];
     extraConfig = ''
       ### MONITORS ###
-      monitor=eDP-1,highres,0x0,1
-      monitor=HDMI-A-1,highres,1920x0,1
+      monitor=eDP-1,1920x1080@239,0x0,1
+      monitor=HDMI-A-1,1920x1080@239,1920x0,1
       
       ### MY PROGRAMS ###
       $terminal = kitty
@@ -149,8 +149,7 @@
           inactive_timeout = 5
           default_monitor = HDMI-A-1
           no_hardware_cursors = true
-          min_refresh_rate = 240
-          no_break_fs_vrr = 1
+          min_refresh_rate = 239
       }
       
       ### KEYBINDINGS ###

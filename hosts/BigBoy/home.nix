@@ -3,6 +3,7 @@
 {
   imports = [
     ../../user/hyprland/hyprland.nix
+    ../../user/i3/i3.nix
     ../../user/waybar/waybar.nix
     ../../user/kitty/kitty.nix
 #    ../../user/pywal/pywal.nix
@@ -44,7 +45,7 @@
     enable = true;
     name = if (config.stylix.polarity == "light") then "Quintom_Ink" else "Quintom_Snow";
     package = pkgs.quintom-cursor-theme;
-    size = 10;
+    size = 8;
   };
 
   # Let Home Manager install and manage itself.

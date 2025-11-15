@@ -20,6 +20,12 @@
 
   networking.networkmanager.enable = true;
 
+#  networking.firewall = {
+#    enable = false;
+#    allowedTCPPorts = [ 80 443 22 4243 2222];
+#  };
+
+
   time.timeZone = "America/New_York";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -69,11 +75,19 @@
     woeusb-ng
     gparted
     ffmpeg-full
+    kdePackages.kdenlive
+    mpc
   ];
 
   #  services
   services.udisks2.enable = true;
   services.mullvad-vpn.enable = true;
+  services.openssh = {
+    enable = true;
+#    ports = [ 4243 22 80 443 2222 ];
+#    settings = {
+#    };
+  };
 
   programs.hyprland = {
     enable = true;
