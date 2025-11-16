@@ -43,6 +43,7 @@
 
   home.pointerCursor = {
     enable = true;
+#    name = "Quintom_Snow";
     name = if (config.stylix.polarity == "light") then "Quintom_Ink" else "Quintom_Snow";
     package = pkgs.quintom-cursor-theme;
     size = 8;

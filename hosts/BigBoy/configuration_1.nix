@@ -20,12 +20,6 @@
 
   networking.networkmanager.enable = true;
 
-#  networking.firewall = {
-#    enable = false;
-#    allowedTCPPorts = [ 80 443 22 4243 2222];
-#  };
-
-
   time.timeZone = "America/New_York";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -56,6 +50,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  environment.pathsToLink = [ "/libexec" ];
+
   environment.systemPackages = with pkgs; [
     vim-full
     dunst
@@ -77,6 +73,9 @@
     ffmpeg-full
     kdePackages.kdenlive
     mpc
+    i3
+    i3lock
+    i3blocks
   ];
 
   #  services
@@ -93,19 +92,6 @@
     enable = true;
     xwayland.enable = true;
   };
-
-  { config, pkgs, ... }:
-
-  {
-    services.xserver.windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [
-        dmenu
-        i3blocks
-      ];
-    };
-  }
-
 
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";

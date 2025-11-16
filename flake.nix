@@ -27,6 +27,7 @@
         font = "Intel One Mono";
         dotfilesDir = "~/nixos";
       };
+
     in
   {
     homeConfigurations = {
@@ -47,7 +48,7 @@
         inherit system;
         modules = [
           ./hosts/BigBoy/configuration.nix
-#          stylix.nixosModules.stylix
+          stylix.nixosModules.stylix
           ./system/stylix/stylix.nix
         ];
         specialArgs = {
